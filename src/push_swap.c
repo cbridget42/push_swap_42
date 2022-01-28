@@ -6,19 +6,25 @@
 /*   By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:49:58 by cbridget          #+#    #+#             */
-/*   Updated: 2022/01/26 16:03:26 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/01/28 14:09:53 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 
+#include <stdio.h>
+
 int	main(int argc, char **argv)
 {
 	int	err;
+
 //	struct slist	stk;
 
 	err = save_slist(argc, argv/*, &stk*/);
-	if (err)
-		return (err);
+	
+	printf("%d\n", err);
+	
+//	read(0, &err, 1); this is for the tests
+	return (err);
 }

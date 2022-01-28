@@ -6,7 +6,7 @@
 #    By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 19:40:05 by cbridget          #+#    #+#              #
-#    Updated: 2022/01/26 14:38:40 by cbridget         ###   ########.fr        #
+#    Updated: 2022/01/28 13:57:55 by cbridget         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEAD = hdrs/push_swap.h
 
 #HEAD_B = hdrs/
 
-SRC = push_swap.c
+SRC = push_swap.c wwargv.c
 
 #SRC_B = push_swap_bonus.c
 
