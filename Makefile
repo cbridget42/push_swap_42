@@ -6,7 +6,7 @@
 #    By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 19:40:05 by cbridget          #+#    #+#              #
-#    Updated: 2022/01/28 13:57:55 by cbridget         ###   ########.fr        #
+#    Updated: 2022/01/29 13:54:04 by cbridget         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,10 @@ LIB :
 	@$(MAKE) bonus -C libft
 
 $(NAME) : $(OBJ) libft/libft.a
-	$(CC) $(FLAGS) $(OBJ) libft/libft.a -o $(NAME)
+	$(CC) $(FLAGS) $(OBJ) -Llibft -lft -o $(NAME)
 
 obj/%.o : src/%.c $(HEAD) Makefile
-	$(CC) $(FLAGS) -I hdrs -I libft -c $< -o $@
+	$(CC) $(FLAGS) -iquote hdrs -iquote libft -c $< -o $@
 
 #bonus :
 #	$(LIB)
