@@ -6,7 +6,7 @@
 #    By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 19:40:05 by cbridget          #+#    #+#              #
-#    Updated: 2022/01/29 13:54:04 by cbridget         ###   ########.fr        #
+#    Updated: 2022/01/30 16:46:16 by cbridget         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEAD = hdrs/push_swap.h
 
 #HEAD_B = hdrs/
 
-SRC = push_swap.c wwargv.c
+SRC = push_swap.c wwargv.c save_struct.c liblsts.c search_MMM.c
 
 #SRC_B = push_swap_bonus.c
 
@@ -24,7 +24,7 @@ OBJ = $(addprefix obj/,$(SRC:.c=.o))
 
 BUILD_FOLDER := $(shell mkdir -p obj)
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -g3
 
 CC = cc
 
