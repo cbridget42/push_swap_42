@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   save_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 13:05:25 by cbridget          #+#    #+#             */
-/*   Updated: 2022/01/30 14:32:27y cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/02 11:40:38 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 
-int	create_strct(char **nums, struct slist **stckA)
+int	create_strct(char **nums, struct s_stcks **stck_a)
 {
 	int	val;
 	int	overflow;
@@ -24,13 +24,13 @@ int	create_strct(char **nums, struct slist **stckA)
 		val = ft_atoiS(*nums, &overflow);
 		if (overflow)
 		{
-			clean_stck(*stckA);
+			clean_stck(*stck_a);
 			return (put_error(3));
 		}
-		if (!(*stckA))
-			*stckA = newlst(val);
+		if (!(*stck_a))
+			*stck_a = newlst(val);
 		else
-			*stckA = addback(*stckA, val);
+			*stck_a = addback(*stck_a, val);
 		nums++;
 	}
 	return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:43:35 by cbridget          #+#    #+#             */
-/*   Updated: 2022/01/30 17:08:24 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/02 12:07:36 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,32 @@
 
 #include <stdio.h>
 
-struct slist
+struct s_stcks
 {
 	int	value;
 	int	move;
-	struct slist	*next;
-	struct slist	*back;
+	struct s_stcks	*next;
+	struct s_stcks	*back;
 };
 
-int		save_slist(int argc,char **argv, struct slist **stck);
+int		save_slist(int argc,char **argv, struct s_stcks **stck);
 int		check_nums(char **nums);
 int		put_error(int err);
 void	clear_nums(char **nums);
 
-int	create_strct(char **nums, struct slist **stckA);
+void	ft_swap(int *array, int i, int j);
+void	ft_qsort(int *array, int min, int max);
+
+int	create_strct(char **nums, struct s_stcks **stck_a);
 int	ft_atoiS(const char *str, int *overflow);
 int	skipp(const char *str, int *sign);
 
-int	search_MMM(struct slist *stckA, int *mmm);
-int	length_stck(struct slist *stck);
+int	search_MMM(struct s_stcks *stck_a, int *mmm);
+int	length_stck(struct s_stcks *stck);
 int	check_sort(int *A, int size);
 
-struct slist	*newlst(int value);
-struct slist	*addback(struct slist *stck, int value);
-struct slist	*clean_stck(struct slist *stck);
+struct s_stcks	*newlst(int value);
+struct s_stcks	*addback(struct s_stcks *stck, int value);
+struct s_stcks	*clean_stck(struct s_stcks *stck);
 
 #endif

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   liblsts.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 13:23:35 by cbridget          #+#    #+#             */
-/*   Updated: 2022/01/30 15:22:57 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/02 11:38:58 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 
-struct slist	*newlst(int value)
+struct s_stcks	*newlst(int value)
 {
-	struct slist	*newlst;
+	struct s_stcks	*newlst;
 
-	newlst = malloc(sizeof(struct slist) * 1);
+	newlst = malloc(sizeof(struct s_stcks) * 1);
 	if (!newlst)
 		return ((void *)0);
 	newlst->value = value;
@@ -26,9 +26,9 @@ struct slist	*newlst(int value)
 	return (newlst);
 }
 
-struct slist	*addback(struct slist *stck, int value)
+struct s_stcks	*addback(struct s_stcks *stck, int value)
 {
-	struct slist	*newback;
+	struct s_stcks	*newback;
 
 	newback = newlst(value);
 	if (!newback)
@@ -50,10 +50,10 @@ struct slist	*addback(struct slist *stck, int value)
 	return (stck);
 }
 
-struct slist	*clean_stck(struct slist *stck)
+struct s_stcks	*clean_stck(struct s_stcks *stck)
 {
-	struct slist	*tmp;
-	struct slist	*del;
+	struct s_stcks	*tmp;
+	struct s_stcks	*del;
 
 	tmp = stck;
 	if (tmp)

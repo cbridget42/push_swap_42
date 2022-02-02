@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   wwargv.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:08:37 by cbridget          #+#    #+#             */
-/*   Updated: 2022/01/30 14:39:45 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/02 11:39:27 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 
-int	save_slist(int argc, char **argv, struct slist **stckA)
+int	save_slist(int argc, char **argv, struct s_stcks **stck_a)
 {
 	char	**nums;
 	int		err;
@@ -31,7 +31,7 @@ int	save_slist(int argc, char **argv, struct slist **stckA)
 		nums = &(argv[1]);
 	err = check_nums(nums);
 	if (!err)
-		err = create_strct(nums, stckA);
+		err = create_strct(nums, stck_a);
 	if (argc == 2)
 		clear_nums(nums);
 	return (err);

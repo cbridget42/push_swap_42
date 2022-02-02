@@ -3,77 +3,112 @@
 /*                                                        :::      ::::::::   */
 /*   search_MMM.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:29:30 by cbridget          #+#    #+#             */
-/*   Updated: 2022/01/30 17:24:03 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/02 12:27:10 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 
-int	search_MMM(struct slist *stckA, int *mmm)
+int	search_MMM(struct s_stcks *stck_a, int *mmm)
 {
-	int	*A;
+	int	*array;
 	int	size;
 	int	i;
 
-	mmm = NULL;
+//	mmm = NULL;
 	
-	size = length_stck(stckA);
+	size = length_stck(stck_a);
 	i = 0;
-	A = malloc(sizeof(int) * size);
-	if (!A)
+	array = malloc(sizeof(int) * size);
+	if (!array)
 		return (1);
 	while (i < size)
 	{
-		A[i] = stckA->value;
-		stckA = stckA->next;
+		array[i] = stck_a->value;
+		stck_a = stck_a->next;
 		i++;
 	}
-	if (check_sort(A, size))
+	
+	
+	i = 0;
+	while (i < size)
 	{
-		free(A);
+		printf(" %d", array[i]);
+		i++;
+	}
+	printf("\n");
+	
+	if (check_sort(array, size))
+	{
+		free(array);
 		return (55);
 	}
-	ft_qsort(A, 0, size);
-	printf("res=%d\n", length_stck(stckA));
-	return (0);
-}
+	ft_qsort(array, 0, size - 1);
 
-void	ft_qsort(int *A, int min, int max)
-{
-	int	mid;
-	int	i;
-
-	i = min;
-	mid = (min + max) / 2;
-	ft_swap(A, min, mid);
-	while (i < max)
+	i = 0;
+	while (i < size)
 	{
-		if (A[i] < A[mid])
-			ft_swap()
+		printf(" %d", array[i]);
+		i++;
 	}
+
+	printf("\nres=%d\n", length_stck(stck_a));
+
+	mmm[0] = 0;
+	return (mmm[0]);
 }
 
-int	check_sort(int *A, int size)
+void	ft_qsort(int *array, int min, int max)
+{
+	int	i;
+	int	tmp;
+
+	tmp = min;
+	i = min + 1;
+	ft_swap(array, min, (min + max) / 2);
+	while (i <= max)
+	{
+		if (array[i] < array[min])
+			ft_swap(array, i, ++tmp);
+		i++;
+	}
+	ft_swap(array, min, tmp);
+	if (min < tmp - 1)
+		ft_qsort(array, min, tmp - 1);
+	if (tmp + 1 < max)
+		ft_qsort(array, tmp + 1, max);
+}
+
+void	ft_swap(int *array, int i, int j)
+{
+	int	tmp;
+
+	tmp = array[i];
+	array[i] = array[j];
+	array[j] = tmp;
+}
+
+int	check_sort(int *array, int size)
 {
 	int	i;
 
 	i = 0;
 	while (i < size - 1)
 	{
-		if (A[i] > A[i + 1])
+		if (array[i] > array[i + 1])
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
-int	length_stck(struct slist *stck)
+int	length_stck(struct s_stcks *stck)
 {
-	struct slist	*tmp;
+	struct s_stcks	*tmp;
 	int				result;
 
 	result = 1;
