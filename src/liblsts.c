@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 13:23:35 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/02 11:38:58 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/05 17:30:20 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,32 @@ struct s_stcks	*addback(struct s_stcks *stck, int value)
 		newback->next = stck;
 	}
 	return (stck);
+}
+
+struct s_stcks	*addtop(struct s_stcks *stck, int value)
+{
+	struct s_stcks	*newtop;
+
+	newtop = newlst(value);
+	if (!newtop)
+		return (clean_stck(stck));
+	if (!stck)
+		return (newtop);
+	if (!stck->next)
+	{
+		newtop->next = stck;
+		newtop->back = stck;
+		stck->next = newtop;
+		stck->back = newtop;
+	}
+	else
+	{
+		stck->back->next = newtop;
+		newtop->back = stck->back;
+		newtop->next = stck;
+		stck->back = newtop;
+	}
+	return (newtop);
 }
 
 struct s_stcks	*clean_stck(struct s_stcks *stck)

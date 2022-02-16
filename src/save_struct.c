@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 13:05:25 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/02 11:40:38 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/13 13:48:36 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	create_strct(char **nums, struct s_stcks **stck_a)
 	overflow = 0;
 	while (*nums)
 	{
-		val = ft_atoiS(*nums, &overflow);
+		val = ft_atoi_s(*nums, &overflow);
 		if (overflow)
 		{
 			clean_stck(*stck_a);
@@ -36,7 +36,7 @@ int	create_strct(char **nums, struct s_stcks **stck_a)
 	return (0);
 }
 
-int	ft_atoiS(const char *str, int *overflow)
+int	ft_atoi_s(const char *str, int *overflow)
 {
 	size_t			i;
 	int				sign;

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cbridget <cbridget@student.21-school.ru    +#+  +:+       +#+         #
+#    By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 19:40:05 by cbridget          #+#    #+#              #
-#    Updated: 2022/01/30 16:46:16 by cbridget         ###   ########.fr        #
+#    Updated: 2022/02/13 17:31:37 by cbridget         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ HEAD = hdrs/push_swap.h
 
 #HEAD_B = hdrs/
 
-SRC = push_swap.c wwargv.c save_struct.c liblsts.c search_MMM.c
+SRC = push_swap.c wwargv.c save_struct.c liblsts.c search_mmm.c ft_radix.c sort_stck.c\
+operations.c operations2.c sort_stck2.c sort_stck3.c sort_double_r.c opt_sort.c\
+sort_stck2_find.c sort_stck2_rot.c sort_stck2_01.c
 
 #SRC_B = push_swap_bonus.c
 

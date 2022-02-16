@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:08:37 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/02 11:39:27 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/13 13:36:45 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,11 @@ int	check_nums(char **nums)
 	int	i;
 
 	j = 0;
-	i = 0;
-	while (nums[i])
+	i = -1;
+	while (nums[++i])
 	{
-		while (nums[i][j] == ' ' || nums[i][j] == '\t' || nums[i][j] == '\n'
-		|| nums[i][j] == '\v' || nums[i][j] == '\f' || nums[i][j] == '\r')
-			j++;
-		if (nums[i][j] == '-' || nums[i][j] == '+')
-			j++;
+		if (check_nums2(nums, &i, &j))
+			return (put_error(3));
 		while (nums[i][j])
 		{
 			if (!ft_isdigit(nums[i][j]))
@@ -65,8 +62,19 @@ int	check_nums(char **nums)
 			j++;
 		}
 		j = 0;
-		i++;
 	}
+	return (0);
+}
+
+int	check_nums2(char **nums, int *i, int *j)
+{
+	if (!nums[*i][0])
+		return (1);
+	while (nums[*i][*j] == ' ' || nums[*i][*j] == '\t' || nums[*i][*j] == '\n'
+		|| nums[*i][*j] == '\v' || nums[*i][*j] == '\f' || nums[*i][*j] == '\r')
+		(*j)++;
+	if (nums[*i][*j] == '-' || nums[*i][*j] == '+')
+		(*j)++;
 	return (0);
 }
 
