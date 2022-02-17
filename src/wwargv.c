@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:08:37 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 13:36:45 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/17 16:58:44 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,23 @@
 int	save_slist(int argc, char **argv, struct s_stcks **stck_a)
 {
 	char	**nums;
+	char	*line;
 	int		err;
 
 	err = 0;
 	if (argc < 2)
 		return (1);
-	else if (argc == 2)
-	{
-		nums = ft_split(argv[1], ' ');
-		if (!nums)
-			return (1);
-	}
-	else
-		nums = &(argv[1]);
+	line = save_slist01(argc, argv);
+	if (!line)
+		return (1);
+	nums = ft_split(line, ' ');
+	free(line);
+	if (!nums)
+		return (1);
 	err = check_nums(nums);
 	if (!err)
 		err = create_strct(nums, stck_a);
-	if (argc == 2)
-		clear_nums(nums);
+	clear_nums(nums);
 	return (err);
 }
 
