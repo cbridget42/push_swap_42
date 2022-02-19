@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 15:14:05 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/17 17:30:50 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/18 20:04:36 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,10 @@ struct s_stcks	*rotate_ab(struct s_stcks *stck, char mod, int act)
 
 int	rr(struct s_stcks **stck_a, struct s_stcks **stck_b, int act)
 {
-	if (!*stck_a || !(*stck_a)->back)
-		return (1);
-	if (!*stck_b || !(*stck_b)->back)
-		return (1);
-	*stck_a = (*stck_a)->next;
-	*stck_b = (*stck_b)->next;
+	if (*stck_a && (*stck_a)->back)
+		*stck_a = (*stck_a)->next;
+	if (*stck_b && (*stck_b)->back)
+		*stck_b = (*stck_b)->next;
 	if (act)
 		write(1, "rr\n", 3);
 	return (0);

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   save_struct.c                                      :+:      :+:    :+:   */
+/*   save_struct_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 13:05:25 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/18 20:21:24 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/18 20:20:55 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "push_swap.h"
+#include "checker_bonus.h"
 
 int	create_strct(char **nums, struct s_stcks **stck_a)
 {
