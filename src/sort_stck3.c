@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 11:50:26 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/15 10:32:46 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:53:26 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	rrightpositiona(struct s_stcks **stck_a, int act)

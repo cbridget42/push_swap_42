@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:49:58 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/17 16:44:06 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:54:43 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	main(int argc, char **argv)

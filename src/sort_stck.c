@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 14:49:00 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 14:29:32 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:54:28 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	sort_stck(struct s_stcks **stck_a, int *mmm)

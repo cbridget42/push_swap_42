@@ -6,7 +6,7 @@
 #    By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 19:40:05 by cbridget          #+#    #+#              #
-#    Updated: 2022/02/19 12:31:27 by cbridget         ###   ########.fr        #
+#    Updated: 2022/02/19 12:55:01 by cbridget         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,16 +42,16 @@ all : LIB $(NAME)
 LIB :
 	$(MAKE) bonus -C libft
 
-$(NAME) : $(OBJ) libft/libft.a
+$(NAME) : $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -Llibft -lft -o $(NAME)
 
-$(NAME_B) : $(OBJ_B) libft/libft.a
+$(NAME_B) : $(OBJ_B)
 	$(CC) $(FLAGS) $(OBJ_B) -Llibft -lft -o $(NAME_B)
 
-obj/%.o : src/%.c $(HEAD) Makefile
+obj/%.o : src/%.c $(HEAD) Makefile libft/libft.a
 	$(CC) $(FLAGS) -iquote hdrs -iquote libft -c $< -o $@
 
-obj/%.o : src/bonus/%.c $(HEAD_B) Makefile
+obj/%.o : src/bonus/%.c $(HEAD_B) Makefile libft/libft.a
 	$(CC) $(FLAGS) -iquote hdrs -iquote libft -c $< -o $@
 
 bonus : LIB $(NAME_B)

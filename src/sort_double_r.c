@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 13:40:44 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 17:42:54 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:54:33 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	double_rot(struct s_stcks **stck_b, struct s_stcks **stck_a,

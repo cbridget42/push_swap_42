@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:11:33 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/05 13:37:28 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:54:57 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 unsigned int	findbyte(unsigned int value, int nb)

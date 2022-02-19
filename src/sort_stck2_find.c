@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 14:58:57 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 15:21:09 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:52:01 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	findmin(struct s_stcks *stck, int *i)

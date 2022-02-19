@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 16:35:06 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/15 11:25:00 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:53:06 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	pushallback(struct s_stcks **stck_a, struct s_stcks **stck_b)

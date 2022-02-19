@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 11:43:09 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/16 11:17:52 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:54:49 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	choose_find(struct s_stcks *stck_a, struct s_stcks *stck_b)

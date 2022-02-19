@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 15:25:44 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 17:01:25 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:52:45 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	rot_a(struct s_stcks **stck_a, struct s_stcks **stck_b, int size_a, int act)

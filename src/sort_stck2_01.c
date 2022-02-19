@@ -6,11 +6,10 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 17:30:14 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 17:30:47 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:51:38 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
 int	cma(struct s_stcks *stck_a, int val, int size_a, int *mvdr)
