@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:49:58 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/19 12:54:43 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 13:41:12 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,8 @@ int	main(int argc, char **argv)
 	if (!err)
 		err = sort_stck(&stck_a, mmm);
 	clean_stck(stck_a);
-	return (err);
+	if (err == 55)
+		return (0);
+	else
+		return (err);
 }

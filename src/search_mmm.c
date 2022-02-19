@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:29:30 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/13 13:59:56 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 14:44:34 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	search_mmm(struct s_stcks *stck_a, int *mmm)
 	int	i;
 
 	size = length_stck(stck_a);
-	i = 0;
+	i = -1;
 	if (!check_sort(stck_a))
 		return (55);
 	array1 = malloc(sizeof(int) * size);
@@ -29,12 +29,14 @@ int	search_mmm(struct s_stcks *stck_a, int *mmm)
 		return (1);
 	array2 = malloc(sizeof(int) * size);
 	if (!array2)
+	{
+		free(array1);
 		return (1);
-	while (i < size)
+	}
+	while (++i < size)
 	{
 		array1[i] = stck_a->value;
 		stck_a = stck_a->next;
-		i++;
 	}
 	search_mmm2(array1, array2, size, mmm);
 	return (0);

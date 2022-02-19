@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:36 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/19 12:45:46 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/19 14:57:22 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,10 @@ int	ft_exec(struct s_stcks **stck_a, struct s_stcks **stck_b)
 	{
 		i = -1;
 		error = ft_exec_read(&cmd, &size, &i);
-		if (error)
-			return (error);
-		if (i > 3)
-			return (put_error(255));
-		else if (i == 0)
+		if (error == 5)
 			return (0);
+		else if (error)
+			return (error);
 		cmd[++i] = '\0';
 		error = ft_exec2(stck_a, stck_b, cmd);
 		free(cmd);
@@ -75,6 +73,11 @@ int	ft_exec_read(char **cmd, unsigned int *size, int *i)
 			if (!*cmd)
 				return (4);
 		}
+	}
+	if (*i == 0)
+	{
+		free(*cmd);
+		return (5);
 	}
 	return (0);
 }
