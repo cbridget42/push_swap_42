@@ -25,3 +25,5 @@ becomes the first one.
 rrb : reverse rotate b - shift down all elements of stack b by 1. The last element
 becomes the first one.
 rrr : rra and rrb at the same time.
+
+script to generate random numbers: `ruby -e "puts (1..5).to_a.shuffle.join(' ')"`
