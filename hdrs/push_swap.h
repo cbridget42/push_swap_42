@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 14:43:35 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/17 17:01:01 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/21 12:12:16 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ struct s_stcks
 	struct s_stcks	*back;
 };
 
+int				verify_argv(int argc, char **argv);
 int				save_slist(int argc, char **argv, struct s_stcks **stck);
 char			*save_slist01(int argc, char **argv);
 char			*save_slist02(char **lines, int i);

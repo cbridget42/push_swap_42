@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:17:55 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/19 12:25:38 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/21 12:12:09 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ struct s_stcks
 	struct s_stcks	*back;
 };
 
+int				verify_argv(int argc, char **argv);
 int				ft_exec(struct s_stcks **stck_a, struct s_stcks **stck_b);
 int				ft_exec_read(char **cmd, unsigned int *size, int *i);
 int				ft_exec2(struct s_stcks **stck_a, struct s_stcks **stck_b,

@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 13:05:25 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/19 12:50:25 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/21 11:38:57 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi_s(const char *str, int *overflow)
 {
 	size_t			i;
 	int				sign;
-	unsigned int	result;
+	unsigned long	result;
 
 	result = 0;
 	sign = 1;

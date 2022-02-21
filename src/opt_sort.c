@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 11:43:09 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/19 12:54:49 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/21 11:45:17 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	choose_find(struct s_stcks *stck_a, struct s_stcks *stck_b)
 	i = -1;
 	bs[0] = 0;
 	bs[1] = 0;
+	if (!stck_b)
+		return (0);
 	while (++i < 2)
 	{
 		if (choose_find_01(&new_stck_a, &new_stck_b, stck_a, stck_b))
