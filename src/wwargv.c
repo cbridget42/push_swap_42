@@ -6,7 +6,7 @@
 /*   By: cbridget <cbridget@student-21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:08:37 by cbridget          #+#    #+#             */
-/*   Updated: 2022/02/17 16:58:44 by cbridget         ###   ########.fr       */
+/*   Updated: 2022/02/24 15:48:59 by cbridget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,11 @@ int	check_nums2(char **nums, int *i, int *j)
 		|| nums[*i][*j] == '\v' || nums[*i][*j] == '\f' || nums[*i][*j] == '\r')
 		(*j)++;
 	if (nums[*i][*j] == '-' || nums[*i][*j] == '+')
+	{
 		(*j)++;
+		if (!ft_isdigit(nums[*i][*j]))
+			return (1);
+	}
 	return (0);
 }
 
