@@ -21,7 +21,7 @@ The goal is to sort in ascending order numbers into stack a.
 * rrb : reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one.
 * rrr : rra and rrb at the same time.
   
-You can see the full assignment here [subject](https://github.com/cbridget42/push_swap_42/blob/main/subject/en.subject.pdf)
+You can see the full assignment here [subject](https://github.com/cbridget42/push_swap_42/blob/main/subject/en.subject.pdf)  
 Coding style: [norminette](https://github.com/cbridget42/push_swap_42/blob/main/subject/en.norm.pdf)
   
 ### Requirements:
